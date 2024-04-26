@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="259.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.agentietursimjava.Controller.RezervareController">
+   <children>
+      <TextField fx:id="numeTextField" layoutX="130.0" layoutY="90.0" promptText="Nume" />
+      <TextField fx:id="numarTelefonTextField" layoutX="130.0" layoutY="140.0" promptText="Numar telefon" />
+      <TextField fx:id="numarLocuriTextField" layoutX="130.0" layoutY="190.0" promptText="Numar locuri" />
+      <Button layoutX="326.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleRezervaButton" prefHeight="26.0" prefWidth="118.0" text="Rezerva" />
+      <Label layoutX="50.0" layoutY="95.0" text="Nume client" />
+      <Label layoutX="40.0" layoutY="145.0" text="Numar telefon" />
+      <Label layoutX="46.0" layoutY="195.0" text="Numar locuri" />
+      <Text layoutX="46.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pentru excursia catre" />
+      <Text fx:id="textObiectivTuristic" fill="#497576cc" layoutX="163.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" underline="true" wrappingWidth="131.39999999999986">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Text layoutX="305.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mai sunt disponibile" />
+      <Text fx:id="textNumarLocuri" fill="#447d89" layoutX="425.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" underline="true" wrappingWidth="31.951171875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Text layoutX="467.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="locuri." />
+   </children>
+</AnchorPane>

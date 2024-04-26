@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="470.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.agentietursimjava.Controller.SignUpController">
+   <children>
+      <Label layoutX="204.0" layoutY="95.0" text="Nume" />
+      <Label layoutX="140.0" layoutY="195.0" text="Agentie de turism" />
+      <Label layoutX="200.0" layoutY="295.0" text="Parola" />
+      <Label layoutX="180.0" layoutY="245.0" text="Username" />
+      <Label layoutX="190.0" layoutY="145.0" text="Prenume" />
+      <Text layoutX="252.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+      <Text layoutX="165.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create an account">
+         <font>
+            <Font name="Bell MT Bold" size="42.0" />
+         </font>
+      </Text>
+      <Label layoutX="148.0" layoutY="345.0" text="Confirma parola" />
+      <TextField fx:id="numeTextField" layoutX="250.0" layoutY="90.0" prefHeight="26.0" prefWidth="150.0" promptText="Nume" />
+      <TextField fx:id="prenumeTextField" layoutX="250.0" layoutY="140.0" prefHeight="26.0" prefWidth="150.0" promptText="Prenume" />
+      <TextField fx:id="agentieTextField" layoutX="250.0" layoutY="190.0" prefHeight="26.0" prefWidth="150.0" promptText="Agentie" />
+      <TextField fx:id="usernameTextField" layoutX="250.0" layoutY="240.0" prefHeight="26.0" prefWidth="150.0" promptText="Username" />
+      <PasswordField fx:id="parolaTextField" layoutX="250.0" layoutY="290.0" prefHeight="26.0" prefWidth="150.0" promptText="Password" />
+      <PasswordField fx:id="confirmaParolaTextField" layoutX="250.0" layoutY="340.0" prefHeight="26.0" prefWidth="150.0" promptText="Repeat password" />
+      <Button layoutX="250.0" layoutY="387.0" mnemonicParsing="false" onAction="#handleSignUpButton" prefHeight="18.0" prefWidth="150.0" text="Sign up!" />
+      <Hyperlink layoutX="364.0" layoutY="410.0" onAction="#handleLogInHyperlink" text="Log in!">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>
