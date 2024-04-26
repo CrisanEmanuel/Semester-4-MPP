@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+option java_outer_classname = "AgentieProto";
+
+message Angajat {
+  string username = 1;
+  string password = 2;
+}
+
+message Excursie {
+  string uuid = 1;
+  string obiectivTuristic = 2;
+  string numeFirmaTransport = 3;
+  string oraPlecare = 4;
+  int32 nrLocuriDisponibile = 5;
+  double pret = 6;
+}
+
+message ExcursieRequest {
+  string obiectivTuristic = 1;
+  int32 deLaOra = 6;
+  int32 panaLaOra = 7;
+}
+
+message Rezervare {
+  string uuid = 1;
+  string numeClient = 2;
+  string numarTelefonClient = 3;
+  int32 nrBilete = 4;
+  Excursie excursie = 5;
+}
+
+message AgentieRequest {
+  enum Type {
+    Unknown = 0;
+    Login = 1;
+    Logout = 2;
+    CautaExcursii = 3;
+    CautaToateExcursiile = 4;
+    UpdateNumarLocuriExcursie = 5;
+    AdaugaRezervare = 6;
+  }
+
+
+  Type type = 1;
+  oneof payload {
+    Angajat angajat = 2;
+    Excursie excursie = 3;
+    Rezervare rezervare = 4;
+    ExcursieRequest excursieRequest = 5;
+  }
+}
+
+message AgentieResponse {
+  enum Type {
+    Unknown = 0;
+    Ok = 1;
+    Error = 2;
+    ExcursiiCautate = 3;
+    ToateExcursiile = 4;
+    UpdatedNumarLocuriExcursie = 5;
+    RezervareAdaugata = 6;
+    ExcursieModificata = 7;
+  }
+
+  Type type = 1;
+  string error = 2;
+  Angajat angajat = 3;
+  Excursie updatedExcursie = 4;
+  repeated Excursie excursiiCautate = 5;
+  repeated Excursie toateExcursiile = 6;
+  Rezervare rezervare = 7;
+}
