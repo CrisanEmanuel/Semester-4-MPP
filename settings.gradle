@@ -1,9 +1,0 @@
-rootProject.name = 'SocketsJava'
-include 'Model'
-include 'Services'
-include 'Persistence'
-include 'Client'
-include 'Server'
-include 'Networking'
-include 'REST'
-
